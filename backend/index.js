@@ -6,6 +6,18 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static("public"));
+
+app.get('/',(req,res)=>{
+    res.send("working");
+})
+app.get('/success',(req,res)=>{
+    res.send("success");
+})
+app.get('/cancel',(req,res)=>{
+    res.send("cancel");
+})
+
 app.post('/create-checkout-session', async (req, res) => {
         const { products } = req.body;
 
@@ -24,8 +36,8 @@ app.post('/create-checkout-session', async (req, res) => {
             payment_method_types: ['card'],
             line_items: LineItem,
             mode: 'payment',
-            success_url: 'http://localhost:3000/success',
-            cancel_url: 'http://localhost:3000/cancel',
+            success_url: 'http://localhost:10000/success',
+            cancel_url: 'http://localhost:10000/cancel',
         });
 
         res.json({ id: session.id });

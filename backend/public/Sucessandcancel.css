@@ -1,0 +1,18 @@
+.sucesspic img,.cancelpic img{
+    width: 250px;
+    height: 250px;
+}
+
+.sucesspic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.cancelpic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
