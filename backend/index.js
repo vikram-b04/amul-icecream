@@ -1,4 +1,3 @@
-console.log("working");
 const express = require("express");
 const app = express();
 const stripe = require("stripe")("sk_test_51NzuH0SGp41m30vUyUGsnRbqECRBQNafiv6juEhUsYHSpm5CHnQVg8y0jEBSlmr0X9gcyzwwMCJgJsBcxW7hjhgV00Tmfduf8T")
@@ -33,6 +32,6 @@ app.post('/create-checkout-session', async (req, res) => {
 
 })
 
-app.listen(5000,()=>{
-    console.log("working on port 5000");
+app.listen(10000,()=>{
+    console.log("working on port 10000");
 })
